@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Form</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      img {
+        display: none;
+        width: 400px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="propertyForm">
+        <div class="row">
+          <!-- File Input -->
+          <div class="col-md-6 col-sm-12">
+            <div class="input-group">
+              <input
+                type="file"
+                class="form-control"
+                id="fileInput"
+                aria-describedby="inputGroupFileAddon04"
+                aria-label="Upload"
+                accept="image/png, image/jpeg"
+              />
+            </div>
+            <img id="uploadedImage" src="#" alt="Uploaded Image" />
+          </div>
+
+          <!-- Title Input -->
+          <div class="col-md-6 col-sm-12">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Title</span
+              >
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                id="titleInput"
+              />
+            </div>
+          </div>
+
+          <!-- Amount Input -->
+          <div class="col-md-6 col-sm-12">
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-default"
+                >Amount</span
+              >
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-default"
+                min="0"
+                step="1"
+                id="amountInput"
+              />
+            </div>
+          </div>
+
+          <!-- Status Select -->
+          <div class="col-md-6 col-sm-12">
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="statusSelect">Status</label>
+              <select class="form-select" id="statusSelect">
+                <option selected>Select Type</option>
+                <option value="For Sell">For Sell</option>
+                <option value="For Rent">For Rent</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Property Type Select -->
+          <div class="col-md-6 col-sm-12">
+            <div class="input-group mb-3">
+              <label class="input-group-text" for="propertyTypeSelect"
+                >Property Type</label
+              >
+              <select class="form-select" id="propertyTypeSelect">
+                <option selected>Select Type</option>
+                <option value="Villa">Villa</option>
+                <option value="Building">Building</option>
+                <option value="Shop">Shop</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Description Textarea -->
+          <div class="col-md-6 col-sm-12">
+            <div class="form-floating mb-3">
+              <textarea
+                class="form-control"
+                placeholder="Leave a description here"
+                id="descriptionTextarea"
+                name="body"
+              ></textarea>
+              <label for="descriptionTextarea">Description</label>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="col-12 text-center mt-5">
+            <button type="button" class="btn btn-danger px-5" id="doneButton">
+              Done
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div></div>
+    <hr />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script>
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function (event) {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+              const img = document.getElementById("uploadedImage");
+              img.src = e.target.result;
+              img.style.display = "block";
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+
+      document
+        .getElementById("doneButton")
+        .addEventListener("click", function () {
+          const title = document.getElementById("titleInput").value;
+          const amount = document.getElementById("amountInput").value;
+          const status = document.getElementById("statusSelect").value;
+          const propertyType =
+            document.getElementById("propertyTypeSelect").value;
+          const description = document.getElementById(
+            "descriptionTextarea"
+          ).value;
+
+          if (!title || !amount || !status || !propertyType || !description) {
+            alert("Please fill out all fields.");
+            return;
+          }
+
+          const formData = {
+            title,
+            amount,
+            status,
+            propertyType,
+            description,
+          };
+
+          let targetPage = "";
+          switch (propertyType) {
+            case "Villa":
+              targetPage = "/villaProperty.html";
+              break;
+            case "Building":
+              targetPage = "building.html";
+              break;
+            case "Shop":
+              targetPage = "shop.html";
+              break;
+            default:
+              alert("Please select a valid property type.");
+              return;
+          }
+
+          localStorage.setItem("formData", JSON.stringify(formData));
+          window.location.href = targetPage;
+        });
+    </script>
+  </body>
+</html>

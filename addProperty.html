@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="img/favicon/favicon-32x32.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      .custom-form-control {
+        background-color: white !important;
+        border-color: #ced4da !important;
+        color: #495057 !important;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <div class="container-fluid nav-bar bg-transparent">
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center"
+        >
+          <div class="icon p-2 me-2">
+            <img
+              class="img-fluid"
+              src="img/logo__2_-removebg-preview.png"
+              alt="Icon"
+              style="width: 80px; height: 60px"
+            />
+          </div>
+          <h1 class="m-0 text-primary">Shreenathji Estate Agency</h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link active">About</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Property</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="property-list.html" class="dropdown-item"
+                  >Property List</a
+                >
+                <a href="property-type.html" class="dropdown-item"
+                  >Property Type</a
+                >
+                <a href="property-agent.html" class="dropdown-item"
+                  >Property Agent</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+              </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a href="#" class="btn btn-primary px-3 d-none d-lg-flex"
+            >Add Property</a
+          >
+        </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <div class="container text-center">
+      <h1>Add Your Property</h1>
+      <button
+        type="button"
+        class="btn btn-primary btn-sm"
+        onclick="extraTicketAttachment()"
+      >
+        <i class="fa fa-plus" aria-hidden="true"></i> Add
+      </button>
+      <hr />
+      <div id="fileUploadsContainer"></div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="validationModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="validationModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="validationModalLabel">
+              Validation Error
+            </h5>
+            <button type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Please fill out all required fields.</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function extraTicketAttachment() {
+        // Create a unique ID for each file input
+        let uniqueId = Date.now();
+        let fileInputId = "readUrl_" + uniqueId;
+        let imageId = "uploadedImage_" + uniqueId;
+        let titleId = "title_" + uniqueId;
+        let amountId = "amount_" + uniqueId;
+        let bodyId = "body_" + uniqueId;
+        let doneButtonId = "done_" + uniqueId;
+        let selectId = "select_" + uniqueId;
+        let propertyId = "property_" + uniqueId;
+
+        // Append the new file input and image element to the container
+        document.getElementById("fileUploadsContainer").insertAdjacentHTML(
+          "beforeend",
+          `
+          <div class="container">
+              <form>
+                  <div class="row">
+                      <!-- File Input -->
+                      <div class="col-md-6 col-sm-12">
+                          <div class="input-group">
+                              <input type="file" class="form-control" id="${fileInputId}" aria-describedby="inputGroupFileAddon04" aria-label="Upload" accept="image/png, image/jpeg">
+                          </div>
+                          <img id="${imageId}" src="#" alt="Uploaded Image" style="display:none; width:400px; margin-top: 10px;"/>
+                      </div>
+  
+                      <!-- Title Input -->
+                      <div class="col-md-6 col-sm-12">
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
+                              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="${titleId}">
+                          </div>
+                      </div>
+  
+                      <!-- Amount Input -->
+                      <div class="col-md-6 col-sm-12">
+                          <div class="input-group mb-3">
+                              <span class="input-group-text" id="inputGroup-sizing-default">Amount</span>
+                              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="${amountId}">
+                          </div>
+                      </div>
+  
+                      <!-- Status Select -->
+                      <div class="col-md-6 col-sm-12">
+                          <div class="input-group mb-3">
+                              <label class="input-group-text" for="${selectId}">Status</label>
+                              <select class="form-select" id="${selectId}">
+                                  <option selected>Select Type</option>
+                                  <option value="For Sell">For Sell</option>
+                                  <option value="For Rent">For Rent</option>
+                              </select>
+                          </div>
+                      </div>
+  
+                      <!-- Property Type Select -->
+                      <div class="col-md-6 col-sm-12">
+                          <div class="input-group mb-3">
+                              <label class="input-group-text" for="${propertyId}">Property Type</label>
+                              <select class="form-select" id="${propertyId}">
+                                  <option selected>Select Type</option>
+                                  <option value="Villa">Villa</option>
+                                  <option value="Building">Building</option>
+                                  <option value="Shop">Shop</option>
+                              </select>
+                          </div>
+                      </div>
+  
+                      <!-- Description Textarea -->
+                      <div class="col-md-6 col-sm-12">
+                          <div class="form-floating mb-3">
+                              <textarea class="form-control" placeholder="Leave a description here" id="${bodyId}" name="body"></textarea>
+                              <label for="${bodyId}">Description</label>
+                          </div>
+                      </div>
+  
+                      <!-- Submit Button -->
+                      <div class="col-12 text-center mt-5">
+                          <button type="button" class="btn btn-danger px-5" id="${doneButtonId}">Done</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+          <hr/>
+          `
+        );
+
+        // Add event listener to preview the image
+        document
+          .getElementById(fileInputId)
+          .addEventListener("change", function (event) {
+            let file = event.target.files[0];
+            if (file) {
+              let reader = new FileReader();
+              reader.onload = function (e) {
+                let img = document.getElementById(imageId);
+                img.src = e.target.result;
+                img.style.display = "block";
+              };
+              reader.readAsDataURL(file);
+            }
+          });
+
+        // Add event listener to the amount input for formatting
+        document
+          .getElementById(amountId)
+          .addEventListener("keyup", function (event) {
+            let inputElement = document.getElementById(amountId);
+            var tempNumber = inputElement.value.replace(/,/gi, "");
+            var commaSeparatedNumber = tempNumber
+              .split(/(?=(?:\d{3})+$)/)
+              .join(",");
+            inputElement.value = commaSeparatedNumber;
+          });
+
+        // Add event listener to the done button to save the property data
+        document
+          .getElementById(doneButtonId)
+          .addEventListener("click", function () {
+            let title = document.getElementById(titleId).value;
+            let amount = document.getElementById(amountId).value;
+            let description = document.getElementById(bodyId).value;
+            let status = document.getElementById(selectId).value;
+            let property = document.getElementById(propertyId).value;
+
+            // Check if any of the required fields are empty
+            if (
+              title.trim() === "" ||
+              amount.trim() === "" ||
+              description.trim() === "" ||
+              status === "Select Type"
+            ) {
+              // Show validation error modal
+              $("#validationModal").modal("show");
+              return;
+            }
+
+            // Function to close the modal when the close icon is clicked
+            $("#validationModal .close").click(function () {
+              $("#validationModal").modal("hide");
+            });
+
+            // Continue with submission if all fields are filled
+            let imageSrc = document.getElementById(imageId).getAttribute("src");
+            let properties =
+              JSON.parse(localStorage.getItem("properties")) || [];
+            properties.push({
+              title: title,
+              amount: amount,
+              description: description,
+              imageSrc: imageSrc,
+              status: status,
+              property: property,
+            });
+            localStorage.setItem("properties", JSON.stringify(properties));
+
+            // Redirect to index.html
+            window.location.href = "/index.html";
+          });
+      }
+
+      // Function to close the modal when the close button is clicked
+      document
+        .getElementById("closeModalButton")
+        .addEventListener("click", function () {
+          let modal = document.getElementById("validationModal");
+          modal.classList.remove("show");
+          modal.style.display = "none";
+          modal.setAttribute("aria-hidden", "true");
+          modal.setAttribute("aria-modal", "false");
+          document.body.classList.remove("modal-open");
+          let backdrop = document.getElementsByClassName("modal-backdrop");
+          for (let i = 0; i < backdrop.length; i++) {
+            backdrop[i].parentNode.removeChild(backdrop[i]);
+          }
+        });
+    </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Boostrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

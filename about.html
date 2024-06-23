@@ -1,112 +1,459 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Shreenathji Estate Agency</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      h2 {
+        color: #dc3545;
+      }
+      a,
+      a:hover,
+      a:focus,
+      a:active {
+        text-decoration: none;
+        outline: none;
+      }
 
-<body>
+      a,
+      a:active,
+      a:focus {
+        color: #6f6f6f;
+        text-decoration: none;
+        transition-timing-function: ease-in-out;
+        -ms-transition-timing-function: ease-in-out;
+        -moz-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        transition-duration: 0.2s;
+        -ms-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        -webkit-transition-duration: 0.2s;
+        -o-transition-duration: 0.2s;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      section {
+        padding: 60px 0;
+        /* min-height: 100vh;*/
+      }
+
+      .sec-title {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 60px;
+      }
+
+      .sec-title .title {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        line-height: 24px;
+        color: #dc3545;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+
+      .sec-title h2 {
+        position: relative;
+        display: block;
+        font-size: 40px;
+        line-height: 1.28em;
+        color: #dc3545;
+        font-weight: 600;
+        padding-bottom: 18px;
+      }
+
+      .sec-title h2:before {
+        position: absolute;
+        content: "";
+        left: 0px;
+        bottom: 0px;
+        width: 50px;
+        height: 3px;
+        background-color: #d1d2d6;
+      }
+
+      .sec-title .text {
+        position: relative;
+        font-size: 16px;
+        line-height: 26px;
+        color: #848484;
+        font-weight: 400;
+        margin-top: 35px;
+      }
+
+      .sec-title.light h2 {
+        color: #ffffff;
+      }
+
+      .sec-title.text-center h2:before {
+        left: 50%;
+        margin-left: -25px;
+      }
+
+      .list-style-one {
+        position: relative;
+      }
+
+      .list-style-one li {
+        position: relative;
+        font-size: 16px;
+        line-height: 26px;
+        color: #222222;
+        font-weight: 400;
+        padding-left: 35px;
+        margin-bottom: 12px;
+      }
+
+      .list-style-one li:before {
+        content: "\f058";
+        position: absolute;
+        left: 0;
+        top: 0px;
+        display: block;
+        font-size: 18px;
+        padding: 0px;
+        color: #ff2222;
+        font-weight: 600;
+        -moz-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1.6;
+        font-family: "Font Awesome 5 Free";
+      }
+
+      .list-style-one li a:hover {
+        color: #44bce2;
+      }
+
+      .btn-style-one {
+        position: relative;
+        display: inline-block;
+        font-size: 17px;
+        line-height: 30px;
+        color: #ffffff;
+        padding: 10px 30px;
+        font-weight: 600;
+        overflow: hidden;
+        letter-spacing: 0.02em;
+        background-color: #dc3545;
+      }
+
+      .btn-style-one:hover {
+        background-color: #0794c9;
+        color: #ffffff;
+      }
+      .about-section {
+        position: relative;
+        padding: 120px 0 70px;
+      }
+
+      .about-section .sec-title {
+        margin-bottom: 45px;
+      }
+
+      .about-section .content-column {
+        position: relative;
+        margin-bottom: 50px;
+      }
+
+      .about-section .content-column .inner-column {
+        position: relative;
+        padding-left: 30px;
+      }
+
+      .about-section .text {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 26px;
+        color: #848484;
+        font-weight: 400;
+      }
+
+      .about-section .list-style-one {
+        margin-bottom: 45px;
+      }
+
+      .about-section .btn-box {
+        position: relative;
+      }
+
+      .about-section .btn-box a {
+        padding: 15px 50px;
+      }
+
+      .about-section .image-column {
+        position: relative;
+      }
+
+      .about-section .image-column .text-layer {
+        position: absolute;
+        right: -110px;
+        top: 50%;
+        font-size: 325px;
+        line-height: 1em;
+        color: #ffffff;
+        margin-top: -175px;
+        font-weight: 500;
+      }
+
+      .about-section .image-column .inner-column {
+        position: relative;
+        padding-left: 80px;
+        padding-bottom: 0px;
+      }
+      .about-section .image-column .inner-column .author-desc {
+        position: absolute;
+        bottom: 16px;
+        z-index: 1;
+        background: orange;
+        padding: 10px 15px;
+        left: 96px;
+        width: calc(100% - 152px);
+        border-radius: 50px;
+      }
+      .about-section .image-column .inner-column .author-desc h2 {
+        font-size: 21px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #fff;
+        margin: 0;
+      }
+      .about-section .image-column .inner-column .author-desc span {
+        font-size: 16px;
+        letter-spacing: 6px;
+        text-align: center;
+        color: #fff;
+        display: block;
+        font-weight: 400;
+      }
+      .about-section .image-column .inner-column:before {
+        content: "";
+        position: absolute;
+        width: calc(50% + 80px);
+        height: calc(100% + 160px);
+        top: -80px;
+        left: -3px;
+        background: transparent;
+        z-index: 0;
+        border: 44px solid #dc3545;
+      }
+
+      .about-section .image-column .image-1 {
+        position: relative;
+      }
+      .about-section .image-column .image-2 {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+
+      .about-section .image-column .image-2 img,
+      .about-section .image-column .image-1 img {
+        box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
+        border-radius: 46px;
+      }
+
+      .about-section .image-column .video-link {
+        position: absolute;
+        left: 70px;
+        top: 170px;
+      }
+
+      .about-section .image-column .video-link .link {
+        position: relative;
+        display: block;
+        font-size: 22px;
+        color: #191e34;
+        font-weight: 400;
+        text-align: center;
+        height: 100px;
+        width: 100px;
+        line-height: 100px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        box-shadow: 0 30px 50px rgba(8, 13, 62, 0.15);
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+      }
+
+      .about-section .image-column .video-link .link:hover {
+        background-color: #191e34;
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
     <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+      </div>
+      <!-- Spinner End -->
 
-
-        <!-- Navbar Start -->
-        <div class="container-fluid nav-bar bg-transparent">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-                <a href="index.html" class="navbar-brand d-flex align-items-center text-center">
-                    <div class="icon p-2 me-2">
-                        <img class="img-fluid" src="img/logo__2_-removebg-preview.png" alt="Icon" style="width: 80px; height: 60px">
-                    </div>
-                    <h1 class="m-0 text-primary">Shreenathji Estate Agency</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Property</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="property-list.html" class="dropdown-item">Property List</a>
-                                <a href="property-type.html" class="dropdown-item">Property Type</a>
-                                <a href="property-agent.html" class="dropdown-item">Property Agent</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu rounded-0 m-0">
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            </div>
-                        </div>
-                        <a href="/contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex">Admin Login</a>
+      <!-- Navbar Start -->
+      <div class="container-fluid nav-bar bg-transparent">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+          <a
+            href="index.html"
+            class="navbar-brand d-flex align-items-center text-center"
+          >
+            <div class="icon p-2 me-2">
+              <img
+                class="img-fluid"
+                src="img/logo__2_-removebg-preview.png"
+                alt="Icon"
+                style="width: 80px; height: 60px"
+              />
+            </div>
+            <h1 class="m-0 text-primary">Shreenathji Estate Agency</h1>
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link active">About</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Property</a
+                >
+                <div class="dropdown-menu rounded-0 m-0">
+                  <a href="property-list.html" class="dropdown-item"
+                    >Property List</a
+                  >
+                  <a href="property-type.html" class="dropdown-item"
+                    >Property Type</a
+                  >
+                  <a href="property-agent.html" class="dropdown-item"
+                    >Property Agent</a
+                  >
                 </div>
+              </div>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu rounded-0 m-0">
+                  <a href="testimonial.html" class="dropdown-item"
+                    >Testimonial</a
+                  >
+                </div>
+              </div>
+              <a href="/contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <a href="login.html" class="btn btn-primary px-3 d-none d-lg-flex"
+              >Admin Login</a
+            >
+          </div>
+        </nav>
+      </div>
+      <!-- Navbar End -->
+
+      <!-- Header Start -->
+      <div class="container-fluid header bg-white p-0">
+        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+          <div class="col-md-6 p-5 mt-lg-5">
+            <h1 class="display-5 animated fadeIn mb-4">About Us</h1>
+            <nav aria-label="breadcrumb animated fadeIn">
+              <ol class="breadcrumb text-uppercase">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="index.html">Pages</a></li>
+                <li
+                  class="breadcrumb-item text-body active"
+                  aria-current="page"
+                >
+                  About
+                </li>
+              </ol>
             </nav>
+          </div>
+          <div class="col-md-6 animated fadeIn">
+            <img class="img-fluid" src="img/header.jpg" alt="" />
+          </div>
         </div>
-        <!-- Navbar End -->
+      </div>
+      <!-- Header End -->
 
-
-        <!-- Header Start -->
-        <div class="container-fluid header bg-white p-0">
-            <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-6 p-5 mt-lg-5">
-                    <h1 class="display-5 animated fadeIn mb-4">About Us</h1>
-                        <nav aria-label="breadcrumb animated fadeIn">
-                        <ol class="breadcrumb text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-body active" aria-current="page">About</li>
-                        </ol>
-                    </nav>
-                </div>
-                <div class="col-md-6 animated fadeIn">
-                    <img class="img-fluid" src="img/header.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!-- Header End -->
-
-
-        <!-- Search Start -->
-        <div class="container-fluid bg-primary mb-5 wow fadeIn" data-wow-delay="0.1s" style="padding: 35px;">
-            <div class="container">
-                <div class="row g-2">
-                    <!-- <div class="col-md-10">
+      <!-- Search Start -->
+      <div
+        class="container-fluid bg-primary mb-5 wow fadeIn"
+        data-wow-delay="0.1s"
+        style="padding: 35px"
+      >
+        <div class="container">
+          <div class="row g-2">
+            <!-- <div class="col-md-10">
                         <div class="row g-2">
                             <div class="col-md-4">
                                 <input type="text" class="form-control border-0 py-3" placeholder="Search Keyword">
@@ -132,14 +479,13 @@
                     <div class="col-md-2">
                         <button class="btn btn-dark border-0 w-100 py-3">Search</button>
                     </div> -->
-                </div>
-            </div>
+          </div>
         </div>
-        <!-- Search End -->
+      </div>
+      <!-- Search End -->
 
-
-        <!-- About Start -->
-        <div class="container-xxl py-5">
+      <!-- About Start -->
+      <!-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -159,197 +505,468 @@ We are a team of dedicated real estate professionals committed to delivering exc
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- About End -->
-
-
-        <!-- Call to Action Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded p-3">
-                    <div class="bg-white rounded p-4" style="border: 1px dashed rgba(0, 185, 142, .3)">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                                <img class="img-fluid rounded w-100" src="img/call-to-action.jpg" alt="">
-                            </div>
-                            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="mb-4">
-                                    <h1 class="mb-3">Contact With Our Certified Agent</h1>
-                                    <p>Discover your Dream Property with our expert real estate team,
-                                        dedicated to providing personalized and seamless service.
-                                        Trust us to turn your real estate goals into reality with integrity and market expertise..</p>
-                                </div>
-                                <a href="tel:9960820202" class="btn btn-primary py-3 px-4 me-2"><i class="fa fa-phone-alt me-2"></i>Make A Call</a>
-                                <a href="/appointment.html" class="btn btn-dark py-3 px-4"><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a>
-                            </div>
-                        </div>
-                    </div>
+        </div> -->
+      <section class="about-section">
+        <div class="container">
+          <div class="row">
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+              <div class="inner-column">
+                <div class="sec-title">
+                  <span class="title">About Us</span>
+                  <h2>Welcome to Shreeenathji Estate Agency</h2>
                 </div>
+                <div class="text">
+                  At Shreeenathji Estate Agency, we are passionate about helping
+                  you find your dream home, perfect commercial space, or
+                  lucrative investment property. With years of experience and a
+                  team of dedicated professionals, we are committed to providing
+                  exceptional real estate services tailored to meet your unique
+                  needs.
+                </div>
+                <!-- <div class="text">
+                  We are here to serve you next level tutorial that currently in
+                  trend to match you with your expertise. Css3 transition is a
+                  learning website. where you can find many good quality content
+                  related to web development and tutorials about plugins. here
+                  we are using html, html5, css, css3, jquery & javascript along
+                  with inspirational UI design layout by professionals by using
+                  Photoshop and adobe allustrator.
+                </div> -->
+                <div class="btn-box">
+                  <a href="#" class="theme-btn btn-style-one">Contact Us</a>
+                </div>
+              </div>
             </div>
-        </div>
-        <!-- Call to Action End -->
 
-
-        <!-- Team Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Property Agents</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+            <!-- Image Column -->
+            <div class="image-column col-lg-6 col-md-12 col-sm-12">
+              <div class="inner-column wow fadeInLeft">
+                <div class="author-desc">
+                  <h2>Shreeenathji</h2>
+                  <span>Estate Agency</span>
                 </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-item rounded overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <figure class="image-1">
+                  <a href="#" class="lightbox-image" data-fancybox="images"
+                    ><img
+                      title="Rahul Kumar Yadav"
+                      src="/Propertyimgs/Building/b6.jpg"
+                      alt=""
+                  /></a>
+                </figure>
+              </div>
             </div>
+          </div>
+          <div class="sec-title">
+            <!-- <span class="title">Our Mission</span> -->
+            <h2>Our Mission</h2>
+          </div>
+          <div class="text">
+            Our mission is to deliver unparalleled real estate services by
+            prioritizing our clients' needs, maintaining the highest standards
+            of integrity, and leveraging our extensive market knowledge. We
+            strive to create lasting relationships with our clients by guiding
+            them through every step of the real estate journey with transparency
+            and trust.
+          </div>
+
+          <div class="sec-title">
+            <!-- <span class="title">Our Future Goal</span> -->
+            <h2>Who We Are</h2>
+          </div>
+          <div class="text">
+            Founded in [Year], [Your Real Estate Company Name] has grown into a
+            leading real estate firm in [Your City/Region]. Our team comprises
+            experienced real estate agents, skilled negotiators, and market
+            experts who are dedicated to exceeding client expectations. We pride
+            ourselves on our deep understanding of the local market, enabling us
+            to offer insightful advice and innovative solutions.
+          </div>
+
+          <div class="sec-title">
+            <!-- <span class="title">Our Future Goal</span> -->
+            <h2>What We Do</h2>
+          </div>
+          <div class="text">
+            Residential Real Estate: Whether you're buying your first home,
+            upgrading to a larger space, or looking to invest in residential
+            properties, we offer a comprehensive range of services to help you
+            navigate the residential real estate market.
+          </div>
+          <div class="text">
+            Commercial Real Estate: From office spaces to retail properties and
+            industrial units, we provide expert guidance to help businesses find
+            the ideal commercial spaces that meet their operational needs and
+            budget.
+          </div>
+          <div class="text">
+            Property Management: Our property management services ensure that
+            your investment properties are well-maintained and profitable. We
+            handle everything from tenant screening and rent collection to
+            maintenance and repairs.
+          </div>
+          <div class="text">
+            Real Estate Investment: Looking to diversify your portfolio with
+            real estate investments? Our team can help you identify lucrative
+            opportunities and make informed decisions to maximize your returns.
+          </div>
+
+          <div class="sec-title">
+            <!-- <span class="title">Our Future Goal</span> -->
+            <h2>Our Values</h2>
+          </div>
+          <div class="text">
+            Integrity: We believe in conducting our business with the highest
+            ethical standards, ensuring that our clients receive honest and
+            transparent service.
+          </div>
+          <div class="text">
+            Excellence: We are committed to excellence in everything we do, from
+            customer service to market analysis, to ensure our clients achieve
+            their real estate goals.
+          </div>
+          <div class="text">
+            Innovation: Embracing the latest technology and market trends, we
+            continuously seek innovative solutions to enhance our services and
+            provide our clients with a competitive edge.
+          </div>
+          <div class="text">
+            Community: We are deeply rooted in the community we serve and are
+            dedicated to giving back. We actively participate in local events
+            and support various charitable organizations to make a positive
+            impact.
+          </div>
+          <div class="sec-title">
+            <!-- <span class="title">Our Future Goal</span> -->
+            <h2>Why Choose Us</h2>
+          </div>
+          <div class="text">
+            Expertise: Our team possesses in-depth knowledge of the real estate
+            market, ensuring you receive accurate information and sound advice.
+          </div>
+          <div class="text">
+            Personalized Service: We understand that every client is unique, and
+            we tailor our services to meet your specific needs and preferences.
+          </div>
+          <div class="text">
+            Proven Track Record: With a history of successful transactions and
+            satisfied clients, we have established ourselves as a trusted name
+            in real estate.
+          </div>
+          <div class="text">
+            Commitment: We are committed to providing exceptional service and
+            building lasting relationships with our clients, partners, and
+            community.
+          </div>
         </div>
-        <!-- Team End -->
-        
+      </section>
+      <!-- About End -->
 
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Get In Touch</h5>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Triveni Nagar Malad (East), Mumbai, Maharashtra 400097</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-9960820202</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>shreenathji067@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Quick Links</h5>
-                        <a class="btn btn-link text-white-50" href="/about.html">About Us</a>
-                        <a class="btn btn-link text-white-50" href="/contact.html">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="/ourServices.html">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="/privacy&policy.html">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="/Terms&Condition.html">Terms & Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Photo Gallery</h5>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-1.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-2.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-3.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-4.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-5.jpg" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="img/property-6.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h5 class="text-white mb-4">Newsletter</h5>
-                        <p>“Stay in the know: Our monthly Newsletter is here!”</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
-                    </div>
+      <!-- Call to Action Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="bg-light rounded p-3">
+            <div
+              class="bg-white rounded p-4"
+              style="border: 1px dashed rgba(0, 185, 142, 0.3)"
+            >
+              <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+                  <img
+                    class="img-fluid rounded w-100"
+                    src="img/call-to-action.jpg"
+                    alt=""
+                  />
                 </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Shreenathji real Estate</a>, All Right Reserved. 
-							Designed By
-                            <a class="border-bottom" href="#">Vashishit Pandya</a>
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="/index.html">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="/faqSection.html">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="mb-4">
+                    <h1 class="mb-3">Contact With Our Certified Agent</h1>
+                    <p>
+                      Discover your Dream Property with our expert real estate
+                      team, dedicated to providing personalized and seamless
+                      service. Trust us to turn your real estate goals into
+                      reality with integrity and market expertise..
+                    </p>
+                  </div>
+                  <a
+                    href="tel:9960820202"
+                    class="btn btn-primary py-3 px-4 me-2"
+                    ><i class="fa fa-phone-alt me-2"></i>Make A Call</a
+                  >
+                  <a
+                    href="/appointment.html"
+                    class="btn btn-dark py-3 px-4 mt-2"
+                    ><i class="fa fa-calendar-alt me-2"></i>Get Appoinment</a
+                  >
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- Footer End -->
+      </div>
+      <!-- Call to Action End -->
 
+      <!-- Team Start -->
+      <!-- <div class="container-xxl py-5">
+        <div class="container">
+          <div
+            class="text-center mx-auto mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="max-width: 600px"
+          >
+            <h1 class="mb-3">Property Agents</h1>
+            <p>
+              Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut
+              dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed
+              rebum vero dolor duo.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/team-1.jpg" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                  >
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold mb-0">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/team-2.jpg" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                  >
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold mb-0">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/team-3.jpg" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                  >
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold mb-0">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+              <div class="team-item rounded overflow-hidden">
+                <div class="position-relative">
+                  <img class="img-fluid" src="img/team-4.jpg" alt="" />
+                  <div
+                    class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"
+                  >
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-facebook-f"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a class="btn btn-square mx-1" href=""
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </div>
+                <div class="text-center p-4 mt-3">
+                  <h5 class="fw-bold mb-0">Full Name</h5>
+                  <small>Designation</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Team End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Get In Touch</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>Triveni Nagar Malad
+                (East), Mumbai, Maharashtra 400097
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+91-9960820202
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>shreenathji067@gmail.com
+              </p>
+              <div class="d-flex pt-2">
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a class="btn btn-outline-light btn-social" href=""
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Quick Links</h5>
+              <a class="btn btn-link text-white-50" href="about.html"
+                >About Us</a
+              >
+              <a class="btn btn-link text-white-50" href="contact.html"
+                >Contact Us</a
+              >
+              <a class="btn btn-link text-white-50" href="ourServices.html"
+                >Our Services</a
+              >
+              <a class="btn btn-link text-white-50" href="/privacy&policy.html"
+                >Privacy Policy</a
+              >
+              <a class="btn btn-link text-white-50" href="/Terms&Condition.html"
+                >Terms & Condition</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Photo Gallery</h5>
+              <div class="row g-2 pt-2">
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/property-1.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/property-2.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/property-3.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/property-4.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/property-5.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="col-4">
+                  <img
+                    class="img-fluid rounded bg-light p-1"
+                    src="img/property-6.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-white mb-4">Newsletter</h5>
+              <p>“Stay in the know: Our monthly Newsletter is here!”</p>
+              <div class="position-relative mx-auto" style="max-width: 400px">
+                <input
+                  class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                  type="text"
+                  placeholder="Your email"
+                />
+                <button
+                  type="button"
+                  class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+                >
+                  SignUp
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy;
+                <a class="border-bottom" href="#">Shreenathji real Estate</a>,
+                All Right Reserved. Designed By
+                <a class="border-bottom" href="#">Vashishit Pandya</a>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <div class="footer-menu">
+                  <a href="/index.html">Home</a>
+                  <a href="">Cookies</a>
+                  <a href="">Help</a>
+                  <a href="/faqSection.html">FQAs</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -362,6 +979,5 @@ We are a team of dedicated real estate professionals committed to delivering exc
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>

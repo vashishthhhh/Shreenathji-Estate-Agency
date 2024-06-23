@@ -1,415 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Services</title>
 
     <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-    rel="stylesheet"
-  />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
- <!-- Google Web Fonts -->
- <link rel="preconnect" href="https://fonts.googleapis.com" />
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
- <link
-   href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
-   rel="stylesheet"
- />
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
 
- <!-- Icon Font Stylesheet -->
- <link
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-   rel="stylesheet"
- />
- <link
-   href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-   rel="stylesheet"
- />
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
- <!-- Libraries Stylesheet -->
- <link href="lib/animate/animate.min.css" rel="stylesheet" />
- <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-<!-- Customized Bootstrap Stylesheet -->
-<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
-<!-- Template Stylesheet -->
-<link href="css/style.css" rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
 
     <style>
-        .service-grid {
-    background: #fcfcfc;
-}
-    .service-title h4 {
-    position: relative;
-    display: inline-block;
-}
-.service-icon {
-    position: relative;
-}
-.service-title p {
-    padding: 0 190px;
-    margin-bottom: 10px;
-}
-.about-info-text h2 {
-    margin-bottom: 23px;
-    text-transform: capitalize;
-    font-weight: 700;
-    line-height: .9;
-}
-.about-info-text p {
-    padding: 0 100px;
-    font-size: 18px;
-    margin-bottom: 26px;
-      position: relative;
-}
-.about-content p {
-    margin-bottom: 0;
-}
-.about-info-text a {
-    margin-bottom: 20px;
-      position: relative;
-}
-.service-icon i {
-    font-size: 40px;
-    color: #e8bc00;
-    margin-bottom: 20px;
-    display: inline-block;
-}
-.service-wrap {
-    border: 1px solid #e6e6e6;
-    padding: 50px 30px;
-      position: relative;
-      border-radius: 10px;
-}
+      .service-grid {
+        background: #fcfcfc;
+      }
+      .service-title h4 {
+        position: relative;
+        display: inline-block;
+      }
+      .service-icon {
+        position: relative;
+      }
+      .service-title p {
+        padding: 0 190px;
+        margin-bottom: 10px;
+      }
+      .about-info-text h2 {
+        margin-bottom: 23px;
+        text-transform: capitalize;
+        font-weight: 700;
+        line-height: 0.9;
+      }
+      .about-info-text p {
+        padding: 0 100px;
+        font-size: 18px;
+        margin-bottom: 26px;
+        position: relative;
+      }
+      .about-content p {
+        margin-bottom: 0;
+      }
+      .about-info-text a {
+        margin-bottom: 20px;
+        position: relative;
+      }
+      .service-icon i {
+        font-size: 40px;
+        color: #e8bc00;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+      .service-wrap {
+        border: 1px solid #e6e6e6;
+        padding: 50px 30px;
+        position: relative;
+        border-radius: 10px;
+      }
 
-.service-wrap p{
-      position: relative;
-}
+      .service-wrap p {
+        position: relative;
+      }
 
-.service-wrap:hover {
-    background-image: url(https://i.ibb.co/mykzQks/services1.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: local;
-    transition: all .5s;
-    border-radius: 10px;
-}
+      .service-wrap:hover {
+        background-image: url(https://i.ibb.co/mykzQks/services1.jpg);
+        background-size: cover;
+        background-position: center center;
+        background-attachment: local;
+        transition: all 0.5s;
+        border-radius: 10px;
+      }
 
-.service-wrap:hover:before {
-    background: rgba(0, 0, 0, 0.2901960784313726);
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    left: 0px;
-    content: "";
-    top: 0;
-    opacity: 1;
-}
+      .service-wrap:hover:before {
+        background: rgba(0, 0, 0, 0.2901960784313726);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        content: "";
+        top: 0;
+        opacity: 1;
+      }
 
-.service-wrap:hover h4,.service-wrap:hover p{
-    color: #fff;
-}
-.service-wrap h4 {
-    font-weight: 600;
-    color: #1e2331;
-    margin-bottom: 17px;
-    font-size: 18px;
-    text-transform: capitalize;
-      position: relative;
-}
-.service-wrap a {
-    font-size: 14px;
-    font-weight: 600;
-      position: relative;
-      text-decoration: none;
-      color: rgb(24, 4, 18);
+      .service-wrap:hover h4,
+      .service-wrap:hover p {
+        color: #fff;
+      }
+      .service-wrap h4 {
+        font-weight: 600;
+        color: #1e2331;
+        margin-bottom: 17px;
+        font-size: 18px;
+        text-transform: capitalize;
+        position: relative;
+      }
+      .service-wrap a {
+        font-size: 14px;
+        font-weight: 600;
+        position: relative;
+        text-decoration: none;
+        color: rgb(24, 4, 18);
+      }
 
-}
-
-.text-primary{
-    color: #00B98E !important;
-}
-
+      .text-primary {
+        color: #00b98e !important;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar Start -->
     <div class="container-fluid nav-bar bg-transparent">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
-          <a
-            href="index.html"
-            class="navbar-brand d-flex align-items-center text-center"
-          >
-            <div class="icon p-2 me-2">
-              <img
-                class="img-fluid"
-                src="img/logo__2_-removebg-preview.png"
-                alt="Icon"
-          style="width: 80px; height: 60px" 
-              />
-            </div>
-            <h1 class="m-0 text-primary">Shreenathji Estate Agency</h1>
-          </a>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Property</a
-                >
-                <div class="dropdown-menu rounded-0 m-0">
-                  <a href="property-list.html" class="dropdown-item"
-                    >Property List</a
-                  >
-                  <a href="property-type.html" class="dropdown-item"
-                    >Property Type</a
-                  >
-                  <a href="property-agent.html" class="dropdown-item"
-                    >Property Agent</a
-                  >
-                </div>
-              </div>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  >Pages</a
-                >
-                <div class="dropdown-menu rounded-0 m-0">
-                  <a href="testimonial.html" class="dropdown-item"
-                    >Testimonial</a
-                  >
-                </div>
-              </div>
-              <a href="contact.html" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="addProperty.html" class="btn btn-primary px-3 d-none d-lg-flex"
-              >Add Property</a
-            >
+      <nav class="navbar navbar-expand-lg bg-white navbar-light py-0 px-4">
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center"
+        >
+          <div class="icon p-2 me-2">
+            <img
+              class="img-fluid"
+              src="img/logo__2_-removebg-preview.png"
+              alt="Icon"
+              style="width: 80px; height: 60px"
+            />
           </div>
-        </nav>
-      </div>
-      <!-- Navbar End -->
-    <section class=" service-grid pb-5 pt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12 text-center mb-4">
-                    <div class="service-title">
-                        <h4>Our Services</h4>
-                    </div>
-                </div>
+          <h1 class="m-0 text-primary">Shreenathji Estate Agency</h1>
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Property</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="property-list.html" class="dropdown-item"
+                  >Property List</a
+                >
+                <a href="property-type.html" class="dropdown-item"
+                  >Property Type</a
+                >
+                <a href="property-agent.html" class="dropdown-item"
+                  >Property Agent</a
+                >
+              </div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <!-- <i class="fas fa-layer-group"></i> -->
-                        </div>
-                        <h4>Web Application</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <!-- <i class="far fa-chart-bar"></i> -->
-                        </div>
-                        <h4>Highly customizable</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <!-- <i class="fas fa-database"></i> -->
-                        </div>
-                        <h4>Responsive design</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <!-- <i class="fas fa-cogs"></i> -->
-                        </div>
-                        <h4>service & plugins</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <!-- <i class="fas fa-chart-pie"></i> -->
-                        </div>
-                        <h4>Optimised for speed</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                       
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-3">
-                    <div class="service-wrap">
-                        <div class="service-icon">
-                            <!-- <i class="fas fa-thumbs-up"></i> -->
-                        </div>
-                        <h4>Dedicated support</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry...</p>
-                       
-                    </div>
-                </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Pages</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+              </div>
             </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a
+            href="addProperty.html"
+            class="btn btn-primary px-3 d-none d-lg-flex"
+            >Add Property</a
+          >
         </div>
+      </nav>
+    </div>
+    <!-- Navbar End -->
+    <section class="service-grid pb-5 pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12 text-center mb-4">
+            <div class="service-title">
+              <h4>Our Services</h4>
+              <h5>
+                We are committed to providing comprehensive real estate
+                solutions that cater to a wide range of needs
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 text-center mb-3">
+            <div class="service-wrap">
+              <div class="service-icon">
+                <!-- <i class="fas fa-layer-group"></i> -->
+              </div>
+              <h4>Residential Sales and Purchases</h4>
+              <p>
+                Buying Your Dream Home: We understand that finding the perfect
+                home is a personal and significant journey. Our team will work
+                closely with you to understand your preferences and needs
+                <br />
+                Selling Your Property: Our proven marketing strategies and
+                extensive network ensure your property receives maximum
+                exposure. We handle everything from professional photography and
+                listing creation to open houses and negotiations, ensuring you
+                get the best possible price.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-3">
+            <div class="service-wrap">
+              <div class="service-icon">
+                <!-- <i class="far fa-chart-bar"></i> -->
+              </div>
+              <h4>Commercial Real Estate</h4>
+              <p>
+                Commercial Property Acquisition: Whether you are looking for
+                office spaces, retail locations, or industrial properties, we
+                provide comprehensive market analysis and property evaluations
+                to help you find it industry.
+                <br />
+                Leasing Services: Our leasing services are tailored to match
+                businesses with the perfect rental spaces. We handle lease
+                negotiations, tenant screenings, and property management,
+                ensuring a smooth leasing experience for both landlords and
+                tenants.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-3">
+            <div class="service-wrap">
+              <div class="service-icon">
+                <!-- <i class="fas fa-database"></i> -->
+              </div>
+              <h4>Property Management</h4>
+              <p>
+                Residential Property Management: Let us handle the day-to-day
+                management of your residential properties. From tenant placement
+                and rent collection to maintenance and repairs, we ensure your
+                properties are well-managed and your tenants are satisfied.
+                <br />
+                Commercial Property Management: Our commercial property
+                management services include tenant relations, financial
+                reporting, maintenance coordination, and lease administration.
+                We focus on maximizing your investment's value while providing
+                exceptional service to your tenants.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-3">
+            <div class="service-wrap">
+              <div class="service-icon">
+                <!-- <i class="fas fa-cogs"></i> -->
+              </div>
+              <h4>Real Estate Investment Consulting</h4>
+              <p>
+                Investment Strategy Development: Our experts provide tailored
+                investment strategies based on thorough market research and
+                analysis.
+                <br />
+                Property Valuation and Analysis: Accurate property valuation is
+                crucial for making informed investment decisions. Our team
+                provides detailed property appraisals and market analysis,
+                ensuring you have all the information needed to make sound
+                investments.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-3">
+            <div class="service-wrap">
+              <div class="service-icon">
+                <!-- <i class="fas fa-chart-pie"></i> -->
+              </div>
+              <h4>Relocation Services</h4>
+              <p>
+                Corporate Relocation: We offer comprehensive relocation services
+                for businesses moving their operations. Our services include
+                site selection, space planning, and coordination of the entire
+                move, ensuring a seamless transition for your company and
+                employees.
+                <br />
+                Individual Relocation: Moving to a new city or country? We
+                provide personalized relocation assistance, including home
+                finding, school search, and settling-in services, making your
+                move as smooth and stress-free as possible.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 text-center mb-3">
+            <div class="service-wrap">
+              <div class="service-icon">
+                <!-- <i class="fas fa-thumbs-up"></i> -->
+              </div>
+              <h4>Custom Real Estate Solutions</h4>
+              <p>
+                Tailored Services: We understand that every client has unique
+                needs. Whether you require specialized market reports, custom
+                marketing strategies, or bespoke property searches, our team is
+                dedicated to providing tailored solutions that meet your
+                specific requirements. We pride ourselves on our commitment to
+                excellence, integrity, and customer satisfaction. Contact us
+                today to learn more about how we can assist you with all your
+                real estate needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer Start -->
     <div
-    class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
-    data-wow-delay="0.1s"
-  >
-    <div class="container py-5">
-      <div class="row g-5">
-        <div class="col-lg-3 col-md-6">
-          <h5 class="text-white mb-4">Get In Touch</h5>
-          <p class="mb-2">
-            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Triveni Nagar Malad (East), Mumbai, Maharashtra 400097</p>
-            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91-9960820202</p>
-            <p class="mb-2"><i class="fa fa-envelope me-3"></i>shreenathji067@gmail.com</p>
-          <div class="d-flex pt-2">
-            <a class="btn btn-outline-light btn-social" href=""
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a class="btn btn-outline-light btn-social" href=""
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a class="btn btn-outline-light btn-social" href=""
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a class="btn btn-outline-light btn-social" href=""
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h5 class="text-white mb-4">Quick Links</h5>
-          <a class="btn btn-link text-white-50" href="">About Us</a>
-          <a class="btn btn-link text-white-50" href="">Contact Us</a>
-          <a class="btn btn-link text-white-50" href="">Our Services</a>
-          <a class="btn btn-link text-white-50" href="/real-estate-html-template/privacy&policy.html">Privacy Policy</a>
-          <a class="btn btn-link text-white-50" href=""
-            >Terms & Condition</a
-          >
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h5 class="text-white mb-4">Photo Gallery</h5>
-          <div class="row g-2 pt-2">
-            <div class="col-4">
-              <img
-                class="img-fluid rounded bg-light p-1"
-                src="img/property-1.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-4">
-              <img
-                class="img-fluid rounded bg-light p-1"
-                src="img/property-2.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-4">
-              <img
-                class="img-fluid rounded bg-light p-1"
-                src="img/property-3.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-4">
-              <img
-                class="img-fluid rounded bg-light p-1"
-                src="img/property-4.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-4">
-              <img
-                class="img-fluid rounded bg-light p-1"
-                src="img/property-5.jpg"
-                alt=""
-              />
-            </div>
-            <div class="col-4">
-              <img
-                class="img-fluid rounded bg-light p-1"
-                src="img/property-6.jpg"
-                alt=""
-              />
+      class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Get In Touch</h5>
+            <p class="mb-2"></p>
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt me-3"></i>Triveni Nagar Malad
+              (East), Mumbai, Maharashtra 400097
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt me-3"></i>+91-9960820202
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-envelope me-3"></i>shreenathji067@gmail.com
+            </p>
+            <div class="d-flex pt-2">
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a class="btn btn-outline-light btn-social" href=""
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
             </div>
           </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h5 class="text-white mb-4">Newsletter</h5>
-          <p>“Stay in the know: Our monthly Newsletter is here!”.</p>
-          <div class="position-relative mx-auto" style="max-width: 400px">
-            <input
-              class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
-              type="text"
-              placeholder="Your email"
-            />
-            <button
-              type="button"
-              class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Quick Links</h5>
+            <a class="btn btn-link text-white-50" href="about.html">About Us</a>
+            <a class="btn btn-link text-white-50" href="contact.html"
+              >Contact Us</a
             >
-              SignUp
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="copyright">
-        <div class="row">
-          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-            &copy; <a class="border-bottom" href="#">Shreenathji real Estate</a>, All
-            Right Reserved.
-
-            Designed By
-            <a class="border-bottom" href="#"
-              >Vashishit Pandya</a
+            <a class="btn btn-link text-white-50" href="ourServices.html"
+              >Our Services</a
+            >
+            <a class="btn btn-link text-white-50" href="/privacy&policy.html"
+              >Privacy Policy</a
+            >
+            <a class="btn btn-link text-white-50" href="/Terms&Condition.html"
+              >Terms & Condition</a
             >
           </div>
-          <div class="col-md-6 text-center text-md-end">
-            <div class="footer-menu">
-              <a href="index.html">Home</a>
-              <a href="">Cookies</a>
-              <a href="">Help</a>
-              <a href="faqSection.html">FQAs</a>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Photo Gallery</h5>
+            <div class="row g-2 pt-2">
+              <div class="col-4">
+                <img
+                  class="img-fluid rounded bg-light p-1"
+                  src="img/property-1.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid rounded bg-light p-1"
+                  src="img/property-2.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid rounded bg-light p-1"
+                  src="img/property-3.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid rounded bg-light p-1"
+                  src="img/property-4.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid rounded bg-light p-1"
+                  src="img/property-5.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="col-4">
+                <img
+                  class="img-fluid rounded bg-light p-1"
+                  src="img/property-6.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h5 class="text-white mb-4">Newsletter</h5>
+            <p>“Stay in the know: Our monthly Newsletter is here!”.</p>
+            <div class="position-relative mx-auto" style="max-width: 400px">
+              <input
+                class="form-control bg-transparent w-100 py-3 ps-4 pe-5"
+                type="text"
+                placeholder="Your email"
+              />
+              <button
+                type="button"
+                class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2"
+              >
+                SignUp
+              </button>
             </div>
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+              &copy;
+              <a class="border-bottom" href="#">Shreenathji real Estate</a>, All
+              Right Reserved. Designed By
+              <a class="border-bottom" href="#">Vashishit Pandya</a>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <div class="footer-menu">
+                <a href="index.html">Home</a>
+                <a href="">Cookies</a>
+                <a href="">Help</a>
+                <a href="faqSection.html">FQAs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- Footer End -->
-
-
+    <!-- Footer End -->
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -421,5 +493,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
